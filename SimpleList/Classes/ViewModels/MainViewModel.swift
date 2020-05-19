@@ -10,6 +10,7 @@ import Foundation
 
 protocol ViewModelDelegate {
     func refreshView()
+    func showError(_ error: NetworkError)
 }
 
 class MainViewModel {
@@ -34,6 +35,7 @@ class MainViewModel {
                 self.delegate.refreshView()
             case .failure(let error):
                 print("Error received: \(error.localizedDescription)")
+                self.delegate.showError(error)
             }
         })
     }

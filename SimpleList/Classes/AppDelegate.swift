@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  SimpleList
 //
-//  Created by Kesavasankar Jawaharlal on 15/05/2020.
+//  Created by Kesava Jawaharlal on 15/05/2020.
 //  Copyright © 2020 Small Screen Science Ltd. All rights reserved.
 //
 

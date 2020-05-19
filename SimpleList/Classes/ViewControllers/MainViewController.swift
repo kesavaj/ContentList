@@ -35,6 +35,9 @@ extension MainViewController: ViewModelDelegate {
     func refreshView() {
         tableView.reloadData()
     }
+    
+    func showError(_ error: NetworkError) {
+    }
 }
 
 // MARK: - Table View DS and Delegate methods

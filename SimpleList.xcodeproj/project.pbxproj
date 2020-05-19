@@ -28,6 +28,11 @@
 		0A656126247294BE0054C8DB /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A656125247294BE0054C8DB /* ImageCell.swift */; };
 		0A6561282472D5BA0054C8DB /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6561272472D5BA0054C8DB /* ImageViewController.swift */; };
 		0A9684892472D80900D91920 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9684882472D80900D91920 /* MainViewModel.swift */; };
+		0AA45FD92473ED3A00227BB7 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA45FD82473ED3A00227BB7 /* NetworkServiceTests.swift */; };
+		0AB637C02473F03B009B079B /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AB637BF2473F03B009B079B /* AVKit.framework */; };
+		0AB637C32473F9E1009B079B /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB637C22473F9E1009B079B /* MainViewModelTests.swift */; };
+		0AB637C62473FB1E009B079B /* Content+Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB637C52473FB1E009B079B /* Content+Create.swift */; };
+		0AB637C82473FCDA009B079B /* MockViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB637C72473FCDA009B079B /* MockViewModelDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		0A656125247294BE0054C8DB /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		0A6561272472D5BA0054C8DB /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		0A9684882472D80900D91920 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		0AA45FD82473ED3A00227BB7 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		0AB637BF2473F03B009B079B /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		0AB637C22473F9E1009B079B /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
+		0AB637C52473FB1E009B079B /* Content+Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content+Create.swift"; sourceTree = "<group>"; };
+		0AB637C72473FCDA009B079B /* MockViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewModelDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB637C02473F03B009B079B /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +104,7 @@
 				0A172F4D246EF58200CDAFF8 /* SimpleList */,
 				0A172F60246EF58900CDAFF8 /* SimpleListTests */,
 				0A172F4C246EF58200CDAFF8 /* Products */,
+				0AB637BE2473F03B009B079B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +131,9 @@
 		0A172F60246EF58900CDAFF8 /* SimpleListTests */ = {
 			isa = PBXGroup;
 			children = (
+				0AB637C42473FB08009B079B /* MocksAndHelpers */,
+				0AB637C12473F9BA009B079B /* ViewModels */,
+				0AA45FD72473ED2600227BB7 /* Services */,
 				0A172F61246EF58900CDAFF8 /* SimpleListTests.swift */,
 				0A172F63246EF58900CDAFF8 /* Info.plist */,
 			);
@@ -221,6 +236,39 @@
 				0A9684882472D80900D91920 /* MainViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0AA45FD72473ED2600227BB7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0AA45FD82473ED3A00227BB7 /* NetworkServiceTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0AB637BE2473F03B009B079B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AB637BF2473F03B009B079B /* AVKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0AB637C12473F9BA009B079B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0AB637C22473F9E1009B079B /* MainViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0AB637C42473FB08009B079B /* MocksAndHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				0AB637C52473FB1E009B079B /* Content+Create.swift */,
+				0AB637C72473FCDA009B079B /* MockViewModelDelegate.swift */,
+			);
+			path = MocksAndHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +396,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AB637C32473F9E1009B079B /* MainViewModelTests.swift in Sources */,
+				0AB637C62473FB1E009B079B /* Content+Create.swift in Sources */,
+				0AA45FD92473ED3A00227BB7 /* NetworkServiceTests.swift in Sources */,
+				0AB637C82473FCDA009B079B /* MockViewModelDelegate.swift in Sources */,
 				0A172F62246EF58900CDAFF8 /* SimpleListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

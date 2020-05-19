@@ -57,9 +57,10 @@ enum NetworkRequest: Equatable {
     }
 }
 
-enum NetworkError: LocalizedError {
+enum NetworkError: LocalizedError, Equatable {
     case networkRequestFailed(urlString: String, errorDescription: String)
     case corruptResponse(responseString: String)
+    case dummyError
     
     var errorDescription: String? {
         switch self {
@@ -67,6 +68,8 @@ enum NetworkError: LocalizedError {
             return "Content '\(urlString)' couldn't be fetched: \(errorDescription)"
         case .corruptResponse(let responseString):
             return "Received corrupt response: \n'\(responseString)'"
+        case .dummyError:
+            return ""
         }
     }
 }
